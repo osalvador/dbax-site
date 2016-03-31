@@ -1,0 +1,36 @@
+<?dbax  
+	   dbax_core.include('header');
+	   dbax_core.g$view('navbar_item') := '404';
+	   dbax_core.include('navbar');
+?>
+			<!-- Banner -->
+				<section id="banner">
+					<header>
+						<h2>404 Page Not Found!</h2>					    
+					</header>
+				</section>
+
+			<!-- Main -->
+            <section class="wrapper style1">
+               <div class="container">
+                  <div id="content">
+                     <!-- Content -->
+                     <article class="article-content text-center"> 
+             			<p>The requested URL  <code id="http_referer"></code> was not found on this server.</p>         
+                     </article>
+                  </div>
+               </div>
+            </section>
+
+
+		<?dbax dbax_core.include('footer'); ?>
+
+		</div>
+		
+      	<?dbax dbax_core.include('foot_scripts'); ?>
+
+      <script type="text/javascript">
+          document.getElementById("http_referer").innerHTML = window.location.href;       
+     </script>
+	</body>
+</html>

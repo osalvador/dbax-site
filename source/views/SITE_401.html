@@ -1,0 +1,33 @@
+<?dbax  
+	   dbax_core.include('header');
+	   dbax_core.g$view('navbar_item') := '404';
+	   dbax_core.include('navbar');
+?>
+			<!-- Banner -->
+				<section id="banner">
+					<header>
+						<h2>401 Not Authorized!</h2>					    
+					</header>
+				</section>
+
+			<!-- Main -->
+            <section class="wrapper style1">
+               <div class="container">
+                  <div id="content">
+                     <!-- Content -->
+                     <article class="article-content text-center"> 
+             			<p>You are not authorized to access this page.</p>         
+                     </article>
+                  </div>
+               </div>
+            </section>
+
+
+		<?dbax dbax_core.include('footer'); ?>
+
+		</div>
+		
+      	<?dbax dbax_core.include('foot_scripts'); ?>
+
+	</body>
+</html>
