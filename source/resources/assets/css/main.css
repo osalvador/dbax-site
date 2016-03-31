@@ -1,6 +1,6 @@
 @import url("font-awesome.min.css");
-@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
-
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans");
 /*
 	Arcana by HTML5 UP
 	html5up.net | @n33co
@@ -61,9 +61,11 @@
 	.container {
 		margin-left: auto;
 		margin-right: auto;
+		padding-right: 10px;
+		padding-left: 10px;
 	}
 
-	.container.\31 25\25 {
+/*	.container.\31 25\25 {
 		width: 100%;
 		max-width: 1750px;
 		min-width: 1400px;
@@ -239,7 +241,7 @@
 			width: 100% !important;
 		}
 
-	}
+	}*/
 
 /* Grid */
 
@@ -1882,7 +1884,7 @@
 
 	hr {
 		border-top: solid 1px #e0e0e0;
-		border: 0;
+		/*border: 0;*/
 		margin-bottom: 1.5em;
 	}
 
@@ -2536,10 +2538,14 @@
 				   color: #eee;
 			}
 
+			#banner img {
+				   width: 45%;
+			}
+
 /* Wrapper */
 
 	.wrapper {
-		padding: 5em 0 3em 0;
+		padding: 2em 0 1em 0;
 	}
 
 		.wrapper.style1 {
@@ -2695,7 +2701,7 @@
 		/* Wrapper */
 
 			.wrapper {
-				padding: 3em 0 1em 0;
+				padding: 2em 0 1em 0;
 			}
 
 		/* CTA */
@@ -2768,7 +2774,7 @@
 					top: -0.25em;
 					font-size: 1.25em;					
 					color: #999;
-				}
+				}				
 
 		/* Box */
 
@@ -2811,6 +2817,10 @@
 
 				#banner header .button {
 					margin: 1em 0 0 0;
+				}
+
+				#banner img {
+				   width: 15%;
 				}
 
 		/* CTA */
@@ -3080,6 +3090,9 @@
 			#banner {
 				height: auto;
 			}
+			#banner img {
+				   width: 15%;
+				}
 
 		/* Wrapper */
 
@@ -3170,4 +3183,119 @@
 				text-align: left;
 			}
 
+	}
+
+
+/* Card */
+.card {
+  background-color: #FFF;
+  border-radius: 1px;
+  overflow: hidden;
+  position: relative; }
+  .card .card-body {
+    padding: 25px; }
+    .card .card-body .sub-title {
+      font-size: 1.2em;
+      padding: 1.2em 0em 0.4em 0em;
+      margin-bottom: 25px; }
+      .card .card-body .sub-title .description {
+        padding-left: 0.4em;
+        font-size: 0.8em;
+        opacity: 0.8; }
+  .card .card-body.half-padding {
+    padding: 12.5px; }
+  .card .card-header .card-title {
+    padding: 1.2em 25px;
+    float: left; }
+    .card .card-header .card-title .title {
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 1.5em;
+      text-decoration: none; }
+  .card .card-header .pull-right {
+    padding: 0.5em 1em; }
+  .card .card-header:after {
+    content: '';
+    display: block;
+    clear: both; }
+  .card .card-profile-img img {
+    width: 100%;
+    height: auto; }
+  .card .card-jumbotron {
+    padding: 1.5em 1.5em; }
+
+.card:hover .card-header .title {
+  text-decoration: none !important; }
+
+.card.summary-inline .card-body {
+  padding: 20px; }
+  .card.summary-inline .card-body .content {
+    float: right; }
+    .card.summary-inline .card-body .content .title {
+      font-family: 'Lato', sans-serif;
+      margin-top: -0.3em;
+      font-size: 3.5em;
+      text-align: right; }
+    .card.summary-inline .card-body .content .sub-title {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.9em;
+      text-align: right;
+      margin-top: -10px;
+      margin-bottom: 0;
+      padding: 0;
+      border-bottom: 0; }
+
+.card.profile .card-body {
+  padding: 0.5em 0.8em; }
+
+.card.profile .card-footer {
+  padding: 0.5em 0.8em; }	
+
+ .card {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);    
+    border: 1px solid #E4E4E4;
+    border-radius: 4px;
+	margin-bottom: 5px; }
+    .card .card-header {
+      border-bottom: 1px solid #E4E4E4; }
+       .card .card-header .title {
+        color: #353d47; }
+     .card .card-body .sub-title {
+      border-bottom: 1px solid #EAEAEA; }
+     .card .card-header.no-border {
+      border-bottom: 0; }
+     .card .card-jumbotron {
+      background-color: #EAEAEA; }
+   .card.primary .card-jumbotron {
+    background-color: #353d47;
+    color: #FFF; }
+   .card.profile .card-footer {
+    border-top: 1px solid #F9F9F9; }
+   .card.summary-inline.red:hover {
+    background-color: #7c1a06; }
+   .card.summary-inline.yellow:hover {
+    background-color: #85630f; }
+   .card.summary-inline.green:hover {
+    background-color: #006551; }
+   .card.summary-inline.blue:hover {
+    background-color: #353d47; }
+   .card.summary-inline.dark:hover {
+    background-color: #09486b; }
+   .card.card-success .card-header {
+    background-color: #1ABC9C; }
+     .card.card-success .card-header .title {
+      color: #FFF; }
+   .card.card-info .card-header {
+    background-color: #22A7F0; }
+     .card.card-info .card-header .title {
+      color: #FFF; }  
+
+
+
+ /* Article Font */
+ 	.article-content {
+		color: #474747;		
+		font-family: 'Noto Sans', sans-serif;		
+		line-height: 24px;
+		font-size: 14px;		
+		font-weight: 300;		
 	}
