@@ -1,9 +1,5 @@
-<?dbax  
-	   dbax_core.include('header');
-	   dbax_core.g$view('navbar_item') := 'home';
-	   dbax_core.include('navbar');
-		
-	   dbax_core.g$view('extra_css') := '
+<?dbax dbax_core.g$var('navbar_item') := 'home'; ?>		
+<?dbax dbax_core.g$var('extra_css') := '
 	    <style>
   			.img-responsive {
 		    	 margin: 0 auto;
@@ -13,7 +9,8 @@
 			}
 		</style>';
 ?>
-
+<?dbax dbax_core.include('header'); ?>
+<?dbax dbax_core.include('navbar'); ?>
 			<!-- Banner -->
 				<section id="banner">
 					<header>

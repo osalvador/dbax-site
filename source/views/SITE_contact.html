@@ -1,11 +1,8 @@
-<?dbax  
-	   dbax_core.include('header');
-	   dbax_core.g$view('navbar_item') := 'Contact';	   
-	   dbax_core.include('navbar');
-	   
-       dbax_core.g$view('extra_css') := q'[<script src='https://www.google.com/recaptcha/api.js'></script>]';
-		
-?>
+<?dbax dbax_core.g$var('navbar_item') := 'Contact';	 ?>
+<?dbax dbax_core.g$var('extra_css') := q'[<script src='https://www.google.com/recaptcha/api.js'></script>]';?>
+
+<?dbax dbax_core.include('header'); ?>
+<?dbax dbax_core.include('navbar'); ?>
 			<!-- Banner -->
 				<section id="banner">
 					<header>
