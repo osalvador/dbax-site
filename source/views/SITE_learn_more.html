@@ -363,21 +363,29 @@
                           <p><strong>URL Pattern:</strong></p>
                           <div class="code-custom"><pre>customers/([[:digit:]]+)/orders/([[:digit:]]+)/type/([[:alpha:]]+)</pre></div>                 		  
                           <p><strong>Controller or Method:</strong></p>
-                          <div class="code-custom"><pre><code>pk_c_dbax_crm.orders/\1/\2/\3</code></pre></div>
+                          <div class="code-custom"><pre><code>pk_c_dbax_crm.orders(\1,\2,'\3')</code></pre></div>
                           <p><strong>Test URL:</strong></p>
                           <div class="code-custom"><pre><code>customers/33245/orders/8769/type/A</code></pre></div>
-                          <p>Will be processed:</p>
+                          <p><strong>Will produce the following procedure call:</strong></p>
+                 		  <div class="code-custom"><pre><code>pk_c_dbax_crm.orders(33245,8769,'A')</code></pre></div>						
+                 		<br>
+                 		  <p>Even you can create case insensitive routes using <i>match_parameter</i> and advanced regex
+                          <p><strong>URL Pattern:</strong></p>
+                          <div class="code-custom"><pre>customers/([[:digit:]]+)/orders/([[:digit:]]+)/type/([[:alpha:]]+)@1,1,i</pre></div>
+                          <p><strong>Calling controller using positional parameter association: </strong></p>
+                          <div class="code-custom"><pre><code>pk_c_dbax_crm.orders(p_customer_id=>\1 , p_order_id=>\2 , p_order_type=>'\3')</code></pre></div>
+                          <p><strong>Test URL:</strong></p>
+                          <div class="code-custom"><pre><code>CUSTOMERS/33245/Orders/8769/tYPe/A</code></pre></div>
+                          <p><strong>Will produce the following procedure call:</strong></p>
+                 		  <div class="code-custom"><pre><code>pk_c_dbax_crm.orders(p_customer_id=>33245 , p_order_id=>8769 , p_order_type=>'A')</code></pre></div>
+                 
+                          <p>The <strong>dbax</strong> routing uses Oracle regular expressions:</p>
                           <ul class="default">
-                          <li>Controller (package.procedure): <strong>pk_c_dbax_crm.orders</strong></li>
-                          <li>g$parameter(1) = <em>33245</em></li>
-                          <li>g$parameter(2) = <em>8769</em></li>
-                          <li>g$parameter(3) = <em>A</em></li>
-                          </ul>
-                          <p>The <strong>dbax</strong> routing  uses Oracle regular expressions:</p>
-                          <ul>
-                          <li><a href="https://docs.oracle.com/cd/E11882_01/appdev.112/e41502/adfns_regexp.htm#ADFNS1003">Oracle REGEX</a></li>
-                          <li><a href="http://docs.oracle.com/cd/B19306_01/server.102/b14200/functions130.htm">Oracle REGEXP_REPLACE</a></li>
-                          </ul>
+                          	<li><a href="https://docs.oracle.com/cd/E11882_01/appdev.112/e41502/adfns_regexp.htm#ADFNS1003">Oracle REGEX</a></li>
+                          	<li><a href="https://docs.oracle.com/cd/B28359_01/server.111/b28286/functions136.htm">Oracle REGEXP_INSTR</a></li>
+                          	<li><a href="https://docs.oracle.com/cd/B28359_01/server.111/b28286/functions137.htm">Oracle REGEXP_REPLACE</a></li>
+                         </ul>
+                 		  
                  
                         <h3 id="web-browser-development">Web Browser Development</h3>
                  		<div class="row">		
