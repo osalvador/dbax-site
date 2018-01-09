@@ -1,0 +1,428 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Learn More - dbax - The Oracle PL/SQL Web Framework</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/dbax-site/resources/images/dbax-ico/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/dbax-site/resources/images/dbax-ico/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/dbax-site/resources/images/dbax-ico/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/dbax-site/resources/images/dbax-ico/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/dbax-site/resources/images/dbax-ico/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/dbax-site/resources/images/dbax-ico/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/dbax-site/resources/images/dbax-ico/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/dbax-site/resources/images/dbax-ico/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/dbax-site/resources/images/dbax-ico/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/dbax-site/resources/images/dbax-ico/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/dbax-site/resources/images/dbax-ico/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/dbax-site/resources/images/dbax-ico/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/dbax-site/resources/images/dbax-ico/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/dbax-site/resources/images/dbax-ico/manifest.json">
+    <link rel="mask-icon" href="/dbax-site/resources/images/dbax-ico/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="apple-mobile-web-app-title" content="dbax.io">
+    <meta name="application-name" content="dbax.io">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/dbax-site/resources/images/dbax-ico/mstile-144x144.png">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <meta name="description" content="dbax - The Oracle PL/SQL Framework for MVC Web development">
+    <meta name="subject" content="PL/SQL Web Application Framework">
+    <meta name="robots" content="index,follow,noodp"><!-- All Search Engines -->
+    <meta name="googlebot" content="index,follow"><!-- Google Specific -->
+    <meta name="generator" content="dbax">
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--[if lte IE 8]><script src="/dbax-site/resources/assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="/dbax-site/resources/assets/css/main.css" />
+    <!--[if lte IE 8]><link rel="stylesheet" href="/dbax-site/resources/assets/css/ie8.css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="/dbax-site/resources/assets/css/ie9.css" /><![endif]-->
+
+
+    <style type="text/css">
+
+        #sidebar {
+            border-bottom: 1px solid #dfdfdf;
+            border-top: 1px solid #dfdfdf;
+        }
+
+        .nav > li > a {
+            color: black;
+            padding: 5px 0;
+            border-bottom: 0px;
+        }
+
+        .nav .nav {
+            display: none;
+        }
+
+        .nav > li.active > a > span,
+        .nav > li.active:hover > a > span,
+        .nav > li.active:focus > a > span {
+            display: inline;
+            font-weight: bold;
+        }
+
+        .nav > li.active > a,
+        .nav > li.active:hover > a,
+        .nav > li.active:focus > a {
+            font-weight: bold;
+        }
+
+        .nav .active .nav {
+            display: block;
+        }
+
+        .nav .nav a {
+            font-weight: normal;
+            font-size: .85em;
+            padding-left: 30px;
+        }
+
+        .nav span {
+            margin: 0 5px 0 2px;
+            display: none;
+        }
+
+        .nav .nav .active a,
+        .nav .nav .active:hover a,
+        .nav .nav .active:focus a {
+            padding-left: 30px;
+            font-weight: bold;
+        }
+
+        .nav .nav .active a span,
+        .nav .nav .active:hover a span,
+        .nav .nav .active:focus a span {
+            display: inline;
+            font-weight: bold
+        }
+
+        .affix-top {
+            position: relative;
+        }
+
+        .affix {
+            top: 20px;
+        }
+
+        .affix,
+        .affix-bottom {
+            width: 213px;
+        }
+
+        .affix-bottom {
+            position: absolute;
+        }
+        @media (min-width:1200px) {
+            .affix,
+            .affix-bottom {
+                width: 263px;
+            }
+        }
+
+        .code-custom {
+            background: #ffffff;
+            overflow:auto;
+            width:auto;
+            border:solid gray;
+            border-width:.1em .1em .1em .1em;
+            padding: 4px;
+            border-radius: 4px;
+            margin: 10px;
+        }
+
+        .code-custom pre {
+            line-height: 150%
+        }
+
+    </style>
+
+    <link rel="stylesheet" href="/dbax-site/resources/components/lightbox2/css/lightbox.min.css">
+
+</head>
+<body data-spy="scroll" data-target=".scrollspy">
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-74703333-1', 'auto');
+    ga('send', 'pageview');
+</script>
+<div id="page-wrapper">
+    <!-- Header -->
+    <header id="header">
+        <!-- Logo -->
+        <h1><a href="https://dbax.io/index" id="logo">dbax <em>Database Application eXpress</em></a></h1>
+        <!-- Nav -->
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                <li class="current"><a href="learnmore.html"><i class="fa fa-graduation-cap"></i> Technical Overview</a></li>
+                <li><a href="https://github.com/osalvador/dbax-lite/releases" target="_blank"><i class="fa fa-cloud-download"></i> Download</a></li>
+                <li><a href="doc.html"><i class="fa fa-book"></i> Documentation</a></li>
+                <li><a href="https://osalvador.github.io/dbaxblog/"><i class="fa fa-rss"></i> Blog</a></li>
+                <li><a href="community.html"><i class="fa fa-comment"></i> Community</a></li>
+                <li><a href="contribute.html"><i class="fa fa-heart"></i> Contribute</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Banner -->
+    <section id="banner">
+        <header>
+            <h2><img src="/dbax-site/resources/images/icons/pngs/pin.png" alt=""></h2>
+            <p> Technical Overview</p>
+        </header>
+    </section>
+
+    <!-- Main -->
+    <section class="wrapper style1 ">
+        <div class="container">
+            <div id="content" class="article-content">
+                <!-- Content -->
+                <div class="row">
+                    <!--left-->
+                    <div class="col-md-3 scrollspy" id="leftCol">
+                        <ul class="nav hidden-xs hidden-sm" data-spy="affix" id="sidebar">
+                            <li><a href="#intro">Introduction <span class="fa fa-angle-right"></span></a></li>
+                            <li><a href="#overview">dbax Overview <span class="fa fa-angle-right"></span></a>
+                                <ul class="nav subsection">
+                                    <li><a href="#application-framework">dbax is an Application Framework <span class="fa fa-angle-right"></span></a></li>
+                                    <li><a href="#free">dbax is Free <span class="fa fa-angle-right"></span></a></li>
+                                    <li><a href="#light-weight">dabx is Light Weight <span class="fa fa-angle-right"></span></a></li>
+                                    <li><a href="#fast">dabx is Fast <span class="fa fa-angle-right"></span></a></li>
+                                    <li><a href="#mvc">dabx uses M-V-C <span class="fa fa-angle-right"></span></a></li>
+                                    <li><a href="#clean-urls">dabx Generates Clean URLs <span class="fa fa-angle-right"></span></a></li>
+                                    <li><a href="#template-engine">dbax Includes a Template Engine <span class="fa fa-angle-right"></span></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#architecture">Architecture Overview <span class="fa fa-angle-right"></span></a></li>
+
+                        </ul>
+                    </div><!--/left-->
+
+
+                    <!--right-->
+                    <div class="col-xs-12 col-md-9">
+                        <h2 id="intro">Introduction <small>to dbax</small></h2>
+                        <p><b>dbax</b> (Data Base Application eXpress) is an Open Source Framework for developing Web applications with SQL, PL/SQL and HTML.
+                            Using a web browser and SQL tool like SQL Developer or Toad, you can develop and deploy professional Web-based applications for desktops and mobile devices.</p>
+
+                        <p><b>dbax</b> is community supported and can be installed in all editions of the Oracle Database.
+                            <b>dbax</b> runs within the Oracle Database allowing your applications to scale to meet your largest user communities.</p>
+
+                        <p>In this technical overview you can see the major components and features of <b>dbax</b>.
+                            It describes how easily and quickly you can build beautiful, secure, and scalable Web applications for any devices.</p>
+
+                        <hr>
+
+                        <h2 id="overview">dbax Overview</h2>
+                        <h3 id="application-framework">dbax is an Application Framework</h3>
+                        <p> <b>dbax</b> is a toolkit for people who build web applications using Oracle and PL/SQL.
+                            Its goal is to enable you to develop projects much faster than you could if you were writing code from scratch,
+                            by providing a rich set of libraries or APIs, for commonly needed tasks, as well as a simple interface to access these libraries.
+                            <b>dbax</b> lets you focus on your project by minimizing the amount of code needed for a given task.</p>
+
+                        <h3 id="free">dbax is Free</h3>
+                        <p>
+                            <b>dbax</b> is licensed under the LGPL license so you can use it however you please. For more information please read the <a href="https://dbax.io/license" >license agreement.</a></p>
+
+                        <h3 id="light-weight">dabx is Light Weight</h3>
+                        <p> Truly light weight. The core system requires only a few very small PL/SQL Packages or libraries. This is in stark contrast to many frameworks that require significantly more resources.
+                            Additional libraries are loaded dynamically upon request, based on your needs for a given process, so the base system is very lean and quite fast.</p>
+
+                        <h3 id="fast">dabx is Fast</h3>
+                        <p> <b>dbax</b> has been developed on top of PL/SQL Web Toolkit. Since version 9.2 of the Oracle Database, PL/SQL Web Toolkit is available as a no-cost option and installed by default.
+                            PL/SQL Web Toolkit has great performance, so much that Oracle has developed several of its solutions on this technology.
+                        </p>
+
+
+                        <h3 id="mvc">dabx uses M-V-C</h3>
+                        <p>
+                            <b>dbax</b> uses the Model-View-Controller approach, which allows great separation between logic and presentation.
+                            This is particularly good for projects in which designers are working with your template files, as the code these files contain will be minimized.</p>
+                        <p>
+                            MVC pattern has become something of a standard in the design of modern web applications.
+                            And for good reason. Most web application code falls under one of the following three categories: presentation, business logic, and data access.
+                            The MVC pattern models this separation of concerns well. The end result is that your presentation code can be consolidated in one part of your application with your business logic in another and your data access code in yet another.
+                            Many developers have found this well-defined separation indispensable for keeping their code organized, especially when more than one developer is working on the same application.
+                        </p>
+
+                        <div class="row">
+                            <div class="col-xs-12 col-md-12 col-sm-12">
+                                <img src="/dbax-site/resources/images/dbax-mvc.png" alt="" class="img-responsive center-block" />
+                            </div>
+                        </div>
+                        <br>
+
+
+                        <h3 id="clean-urls">dabx Generates Clean URLs</h3>
+                        <p>
+                            The URLs generated by <b>dbax</b> are clean and search-engine friendly.
+                            Rather than using the standard "query string" approach to URLs that is synonymous with dynamic systems, <b>dbax</b> uses a segment-based approach:
+                        <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .1em;padding: 4px;border-radius: 4px;"><pre style="margin: 0; line-height: 150%">https://dabx.io/blog/post/25</pre></div>
+
+                        <br>
+                        <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #0000aa">if</span> route_<span style="color: #009999">.</span><span style="color: #0000aa">get</span> (<span style="color: #aa5500">&#39;blog/post/{post_id}&#39;</span>, l_params )
+<span style="color: #0000aa">then</span> 
+    <span style="color: #0000aa">return</span> pk_posts<span style="color: #009999">.</span>show_post(l_params(<span style="color: #aa5500">&#39;post_id&#39;</span>));
+<span style="color: #0000aa">end</span> <span style="color: #0000aa">if</span>;
+</pre></div>
+
+                        <br>
+                        <a href="https://dbax.io/documentation/en/Routing.html" target="_blank"> dbax routing documentation </a>
+
+
+                        </p>
+
+                        <h3 id="template-engine">dbax Includes a Template Engine</h3>
+                        <p>
+                            A template engine is needed to keep interaction with the HTML views, therefore dbaxuses <a href="https://github.com/osalvador/tePLSQL">tePLSQL</a> which has the same syntax as <a href="http://docs.oracle.com/cd/E11882_01/appdev.112/e41502/adfns_psp.htm#ADFNS016">Oracle PSP</a>.</p>
+
+
+
+
+                        <p>For example, this simple code:
+                        <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">&lt;ul&gt;
+ &lt;% <span style="color: #0000aa">for</span> c1 <span style="color: #0000aa">in</span> (<span style="color: #0000aa">select</span>   username <span style="color: #0000aa">from</span> all_users) <span style="color: #0000aa">loop</span> %&gt;
+    &lt;li&gt; &lt;%= c1<span style="color: #009999">.</span>username %&gt; &lt;/li&gt;
+ &lt;% <span style="color: #0000aa">end</span> <span style="color: #0000aa">loop</span>; %&gt;
+&lt;/ul&gt;
+</pre></div>
+
+                        </p>
+
+                        <p>Will produce the following result:
+
+                            <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #1e90ff; font-weight: bold">&lt;ul&gt;</span>
+    <span style="color: #1e90ff; font-weight: bold">&lt;li&gt;</span> XS$NULL <span style="color: #1e90ff; font-weight: bold">&lt;/li&gt;</span>
+    <span style="color: #1e90ff; font-weight: bold">&lt;li&gt;</span> LITE_TEST <span style="color: #1e90ff; font-weight: bold">&lt;/li&gt;</span>
+    <span style="color: #1e90ff; font-weight: bold">&lt;li&gt;</span> LITE <span style="color: #1e90ff; font-weight: bold">&lt;/li&gt;</span>
+    <span style="color: #1e90ff; font-weight: bold">&lt;li&gt;</span> APEX_040000 <span style="color: #1e90ff; font-weight: bold">&lt;/li&gt;</span>
+    <span style="color: #1e90ff; font-weight: bold">&lt;li&gt;</span> APEX_PUBLIC_USER <span style="color: #1e90ff; font-weight: bold">&lt;/li&gt;</span>
+    <span style="color: #1e90ff; font-weight: bold">&lt;li&gt;</span> FLOWS_FILES <span style="color: #1e90ff; font-weight: bold">&lt;/li&gt;</span>
+    <span style="color: #1e90ff; font-weight: bold">&lt;li&gt;</span> HR <span style="color: #1e90ff; font-weight: bold">&lt;/li&gt;</span>
+    <span style="color: #1e90ff; font-weight: bold">&lt;li&gt;</span> MDSYS <span style="color: #1e90ff; font-weight: bold">&lt;/li&gt;</span>
+    <span style="color: #1e90ff; font-weight: bold">&lt;li&gt;</span> ANONYMOUS <span style="color: #1e90ff; font-weight: bold">&lt;/li&gt;</span>
+    <span style="color: #1e90ff; font-weight: bold">&lt;li&gt;</span> XDB <span style="color: #1e90ff; font-weight: bold">&lt;/li&gt;</span>
+    <span style="color: #1e90ff; font-weight: bold">&lt;li&gt;</span> CTXSYS <span style="color: #1e90ff; font-weight: bold">&lt;/li&gt;</span>
+    <span style="color: #1e90ff; font-weight: bold">&lt;li&gt;</span> OUTLN <span style="color: #1e90ff; font-weight: bold">&lt;/li&gt;</span>
+    <span style="color: #1e90ff; font-weight: bold">&lt;li&gt;</span> SYSTEM <span style="color: #1e90ff; font-weight: bold">&lt;/li&gt;</span>
+    <span style="color: #1e90ff; font-weight: bold">&lt;li&gt;</span> SYS <span style="color: #1e90ff; font-weight: bold">&lt;/li&gt;</span>
+    <span style="color: #1e90ff; font-weight: bold">&lt;li&gt;</span> DBAX <span style="color: #1e90ff; font-weight: bold">&lt;/li&gt;</span>
+<span style="color: #1e90ff; font-weight: bold">&lt;/ul&gt;</span>
+</pre></div>
+
+
+                        </p>
+
+
+                        <hr>
+
+                        <h2 id="architecture">Architecture Overview</h2>
+                        <p>
+                            <b>dbax</b> utilizes a simple architecture where pages are dynamically generated using a template engine and MVC pattern. Views, Controllers and Models are PL/SQL packages. When developers create, modify, or delete any component the changes will be shown immediately.
+                        </p>
+
+
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6 col-sm-6 text-center">
+                                <h4 >Single instance. Perfect for VPS cloud infrastructure or development environment.</h4>
+                                <img src="/dbax-site/resources/images/dbax-Architecture-Overview-Internet.png" alt="" class="img-responsive center-block" />
+                            </div>
+                            <div class="col-xs-12 col-md-6 col-sm-6 text-center">
+                                <h4>Multiple instances. Perfect for Enterprise infrastructure with multiple Oracle Databases instances, Oracle RAC or Exadata.</h4>
+                                <img src="/dbax-site/resources/images/dbax-Architecture-Overview-Enterprise.png" alt="" class="img-responsive center-block" />
+                            </div>
+                        </div>
+
+
+                        <p>The <b>dbax</b> architecture requires some Web server to proxy requests between a client Web browser and the dbax engine. The Web server options are:</p>
+                        <ul class="default"><li>Oracle REST Data Services: Oracle REST Data Services (ORDS) is a Java based, free tool that runs in JEE container such as Oracle WebLogic Server, Oracle Glassfish Server, and Apache Tomcat.</li>
+                            <li> Embedded PL/SQL Gateway: The Embedded PL/SQL Gateway (EPG) runs in the Oracle XML DB Protocol Server within the Oracle Database and includes the core features of mod_plsql. </li>
+                            <li> Oracle HTTP Server: The Oracle HTTP Server (Apache) with mod_plsql plugin can be placed on the same physical machine as the database, or on a separate physical machine. Note: mod_plsql is deprecated as of Oracle HTTP Server 12c (12.1.3). Oracle recommends using Oracle REST Data Services instead.</li>
+                        </ul>
+
+
+
+                    </div><!--/right-->
+                </div><!--/row-->
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="copyright">
+            <h4>Site Map</h4>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="learnmore.html">Learn More</a></li>
+                <li><a href="https://github.com/osalvador/dbax-lite/releases">Download</a></li>
+                <li><a href="doc.html">Documentation</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="contribute.html">Contribute</a></li>
+                <li><a href="contact.html">Contact dbax Team</a></li>
+                <li><a href="license.html">License Agreement</a></li>
+                <li><a href="policies.html">Policies</a></li>
+            </ul>
+        </div>
+
+        <!-- Icons -->
+        <ul class="icons">
+            <li><a href="https://twitter.com/dbaxio" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="https://github.com/osalvador/dbax-lite" class="icon fa-github"><span class="label">GitHub</span></a></li>
+            <li><a href="https://groups.google.com/forum/#!forum/dbax" class="icon fa-google"><span class="label">Google Groups</span></a></li>
+            <li><a href="https://m.do.co/c/f78524958dbe" class="icon fa-cloud"><span class="label">DigitalOcean</span></a></li>
+        </ul>
+
+        <!-- Copyright -->
+        <div class="copyright">
+            <ul class="menu">
+                <li>&copy; 2017 dbax.io, the Oracle PL/SQL Web Framework. Created by <a href="https://twitter.com/oscarsalvatore" >Oscar Salvador Magallanes</a> </li>
+                <li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+            </ul>
+        </div>
+
+    </footer>
+
+
+</div>
+
+
+<script src="/dbax-site/resources/components/lightbox2/js/lightbox-plus-jquery.min.js"></script>
+
+
+<!-- Scripts -->
+<script src="/dbax-site/resources/assets/js/jquery.min.js"></script>
+<script src="/dbax-site/resources/assets/js/jquery.dropotron.min.js"></script>
+<script src="/dbax-site/resources/assets/js/skel.min.js"></script>
+<script src="/dbax-site/resources/assets/js/util.js"></script>
+<!--[if lte IE 8]><script src="/dbax-site/resources/assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="/dbax-site/resources/assets/js/main.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+<script type='text/javascript'>
+    $(document).ready(function() {
+        /* activate sidebar */
+        $('#sidebar').affix({
+            offset: {
+                top: $('#sidebar').offset().top
+            }
+        });
+
+    });
+</script>
+
+</body>
+</html>
